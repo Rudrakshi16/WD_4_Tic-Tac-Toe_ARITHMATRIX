@@ -42,7 +42,7 @@ tic-tac-toe/ <br>
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/tic-tac-toe.git
+   git clone [https://github.com/your-username/tic-tac-toe.git](https://github.com/Rudrakshi16/WD_4_Tic-Tac-Toe_ARITHMATRIX.git)
    cd tic-tac-toe
    ```
 2. Open index.html in your browser to start playing 🎉
