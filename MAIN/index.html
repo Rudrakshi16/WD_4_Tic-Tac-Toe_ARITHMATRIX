@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe — Rudrakshi Nailwal</title>
+  <meta name="description" content="Tic Tac Toe game (3x3) by Rudrakshi Nailwal. Two-player with custom symbols, win/draw detection, scoring, and reset options." />
+  <link rel="stylesheet" href="style.css" /> 
+</head>
+<body>
+  <div class="page">
+    <main class="card" role="main" aria-labelledby="title">
+      <header class="header">
+        <div>
+          <h1 id="title" style="text-align: center;">Tic Tac Toe 🎮</h1>
+          <p class="lead" style="text-align:center;">By Rudrakshi Nailwal</p>
+        </div>
+        <!-- player names form -->
+        <form id="playersForm" class="players" aria-label="Player names">
+          <label>
+            <span class="sr-only">Player 1 name</span>
+            <input id="nameX" name="nameX" type="text" placeholder="Player 1 name (default: X)">
+          </label>
+          <select id="symbolX">
+            <option value="X" selected>X</option>
+            <option value="⭐">⭐</option>
+            <option value="❤️">❤️</option>
+            <option value="🐱">🐱</option>
+          </select>
+          <br>
+          <label>
+            <span class="sr-only">Player 2 name</span>
+            <input id="nameO" name="nameO" type="text" placeholder="Player 2 name (default: O)">
+          </label>
+          <select id="symbolO">
+            <option value="O" selected>O</option>
+            <option value="🌙">🌙</option>
+            <option value="🔥">🔥</option>
+            <option value="🍀">🍀</option>
+          </select>
+        </form>
+      </header>
+
+      <section class="game" aria-label="Tic Tac Toe game">
+        <!-- board -->
+        <div id="board" class="board" role="grid" aria-label="Tic Tac Toe board"></div>
+
+        <!-- status -->
+        <div class="meta">
+          <div class="turn" id="turnLabel" aria-live="polite">
+            Player <strong id="currentPlayerLabel">X</strong>'s turn
+          </div>
+          <div class="scores">
+            <div id="labelX">X</div>: <span id="scoreX">0</span>
+            <div id="labelO">O</div>: <span id="scoreO">0</span>
+          </div>
+        </div>
+        <br>
+        <!-- result -->
+        <div id="result" class="result" role="status" aria-live="polite" hidden></div>
+
+        <!-- controls -->
+        <div class="controls">
+          <button id="resetRound" type="button">Reset Round</button>
+          <button id="resetAll" type="button" class="secondary">Reset All</button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <small>
+          <hr>
+          <a href="LICENSE" rel="license" target="_blank" rel="noopener">MIT License</a> — 
+          Copyright © 2025 <strong>Rudrakshi Nailwal</strong>.
+        </small>
+      </footer>
+    </main>
+  </div>
+
+  <template id="cellTpl">
+    <button class="cell" type="button" role="gridcell" aria-label="Empty cell" tabindex="0"></button>
+  </template>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
